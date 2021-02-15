@@ -9,8 +9,8 @@ require_once "router.php";
 
 /** Setando as rotas */
 
-setRoute('', 'menu');
-setRoute('teste', 'menu');
+setRoute('', 'index');
+setRoute('nada_aqui', '404');
 
 /** Chamando a rota requisitada */
 

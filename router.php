@@ -2,8 +2,9 @@
 
 /**
  * Url raiz da aplicação
+ * @var string $app_url
  */
-const APP_URL = '/ShipMaintainer/';
+$app_url = getenv('APP_URL');
 
 /**
  * Armazena as rotas
@@ -19,9 +20,9 @@ $routes = [];
  */
 function setRoute(string $route, string $fileName): void
 {
-    global $routes;
+    global $routes, $app_url;
 
-    $route = APP_URL . trim($route);
+    $route = $app_url . trim($route);
     $routes[$route] = './View/' . $fileName;
 }
 
@@ -33,10 +34,15 @@ function setRoute(string $route, string $fileName): void
  */
 function goToRoute($route): void
 {
-    global $routes;
+    global $routes, $app_url;
 
     $route = trim($route);
-    $path = $routes[$route];
 
-    require $path . '.php';
+    if (array_key_exists($route, $routes)) {
+        $path = $routes[$route] . '.php';
+        require $path;
+        return;
+    }
+
+    require $routes[$app_url . 'nada_aqui'] . '.php';
 }
