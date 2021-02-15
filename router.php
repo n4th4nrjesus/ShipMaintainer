@@ -28,11 +28,10 @@ function setRoute(string $route, string $fileName): void
 
 /**
  * Mostra o conteúdo para a rota
- * 
  * @param string $route
  * @return void
  */
-function goToRoute($route): void
+function loadRoute($route): void
 {
     global $routes, $app_url;
 
@@ -44,5 +43,5 @@ function goToRoute($route): void
         return;
     }
 
-    require $routes[$app_url . 'nada_aqui'] . '.php';
+    require $routes[$app_url . '404'] . '.php';
 }
