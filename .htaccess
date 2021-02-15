@@ -1,0 +1,6 @@
+# Faz com que todas as requests passem pelo sistema de rotas do index
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /ShipMaintainer/index.php?path=$1 [NC,L,QSA]
