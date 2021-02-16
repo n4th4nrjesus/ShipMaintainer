@@ -1,4 +1,5 @@
-* {
+body,
+body * {
   display: flex;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;

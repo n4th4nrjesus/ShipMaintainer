@@ -1,41 +1,26 @@
-<!DOCTYPE html>
+<?php
 
-<html lang="pt-br">
+/**
+ * Todas as requests vêm pra esse arquivo.
+ * Este, por sua vez, seta qual rota corresponde a qual arquivo e então redireciona para
+ * a rota correta
+ */
 
-<head>
-    <meta charset="utf-8">
-    <title>Ship Maintainer</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./View/css/main.css">
-</head>
+require_once "router.php";
 
-<body>
+/** Setando as rotas */
 
-    <?php
+setRoute('', 'index', 'Menu principal');
+setRoute('404', '404', 'Página não encontrada');
 
-    /**
-     * Todas as requests vêm pra esse arquivo.
-     * Este, por sua vez, seta qual rota corresponde a qual arquivo e então redireciona para a rota correta
-     */
+/** Carregando o header padrão das páginas */
 
-    require_once "router.php";
+require "./View/inc/head.php";
 
-    /** Setando as rotas */
+/** Chamando a rota requisitada */
 
-    setRoute('', 'index');
-    setRoute('404', '404');
+loadRoute($_SERVER['REQUEST_URI']);
 
-    /** Chamando a rota requisitada */
+/** Carregando o footer padrão das páginas */
 
-    loadRoute($_SERVER['REQUEST_URI']);
-
-    ?>
-
-</body>
-
-<footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-</footer>
-
-</html>
+require "./View/inc/footer.php";
