@@ -1,6 +1,87 @@
+/* Geral */
+
 body,
 body * {
-  display: flex;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
+  background: fixed;
+}
+
+/* Desktop */
+
+div.content {
+  display: flex;
+  height: 100vh;
+}
+
+div.content > div.box {
+  width: 100%;
+  margin: auto 0;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: teal;
+  color: gainsboro;
+}
+
+div.content > div.box .box-separator {
+  border-right: 4px solid gainsboro;
+}
+
+div.content > div.box .box-title {
+  text-align: right;
+  font-weight: 700;
+  text-decoration: overline;
+  padding: 10px 0;
+  margin-bottom: 0;
+  border-bottom: 4px solid gainsboro;
+  color: lightgreen;
+}
+
+div.content > div.box .box-subtitle {
+  font-weight: 400;
+  padding: 15px 0 20px 0;
+  color: lightgreen;
+}
+
+div.content > div.box .box-text {
+  font-weight: 400;
+  text-align: right;
+  padding: 0;
+}
+
+.attractive-text {
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-style: italic;
+  color: lightgreen;
+  padding: 10px 0 !important;
+  margin: 0;
+}
+
+b.text-diff {
+  color: lightgreen;
+}
+
+/* Mobile */
+
+@media (max-width: 991.98px) {
+  div.content > div.box .box-separator {
+    border-right: none;
+    border-bottom: 4px solid gainsboro;
+    margin-bottom: 15px;
+  }
+
+  div.content > div.box .box-title {
+    font-size: 54px;
+    margin-bottom: 15px;
+  }
+
+  div.content > div.box .box-subtitle {
+    font-size: 44px;
+  }
+
+  div.content > div.box .box-text {
+    text-align: left;
+    font-size: 34px;
+  }
 }
