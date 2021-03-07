@@ -23,6 +23,11 @@ div.content > div.box {
   color: gainsboro;
 }
 
+div.content > div.box.main-menu-box {
+  animation-name: main-menu-in;
+  animation-duration: 3s;
+}
+
 div.content > div.box .box-separator {
   border-right: 4px solid gainsboro;
 }
@@ -83,5 +88,16 @@ b.text-diff {
   div.content > div.box .box-text {
     text-align: left;
     font-size: 34px;
+  }
+}
+
+/* Animações */
+
+@keyframes main-menu-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
