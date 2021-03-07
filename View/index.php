@@ -15,8 +15,8 @@
             </div>
             <div class="col-12 col-lg-6">
                 <div class="text-center d-grid gap-2 h-100 pt-5">
-                    <button type="button" class="btn btn-menu-option mb-5">Novo jogo</button>
-                    <button type="button" class="btn btn-menu-option">Continuar jogo</button>
+                    <button onclick="location.href='novo-jogo'" type="button" class="btn btn-menu-option mb-5">Novo jogo</button>
+                    <button onclick="location.href='continuar-jogo'" type=" button" class="btn btn-menu-option">Continuar jogo</button>
                 </div>
             </div>
         </div>

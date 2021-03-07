@@ -12,6 +12,8 @@ require_once "router.php";
 
 setRoute('', 'index', 'Menu principal');
 setRoute('404', '404', 'Página não encontrada');
+setRoute('novo-jogo', 'new_game', 'Novo jogo');
+setRoute('continuar-jogo', 'continue_game', 'Continuar jogo');
 
 /** Carregando o header padrão das páginas */
 
