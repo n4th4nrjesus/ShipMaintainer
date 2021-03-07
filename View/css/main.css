@@ -17,7 +17,7 @@ div.content {
 div.content > div.box {
   width: 100%;
   margin: auto 0;
-  padding: 15px;
+  padding: 30px 15px;
   border-radius: 15px;
   background-color: teal;
   color: gainsboro;
@@ -25,7 +25,7 @@ div.content > div.box {
 
 div.content > div.box.main-menu-box {
   animation-name: main-menu-in;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 div.content > div.box .box-separator {
@@ -67,6 +67,18 @@ b.text-diff {
   color: lightgreen;
 }
 
+.btn-menu-option {
+  color: gainsboro;
+  border: 2px solid gainsboro;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.btn-menu-option:hover {
+  background-color: gainsboro;
+  color: crimson;
+}
+
 /* Mobile */
 
 @media (max-width: 991.98px) {
@@ -74,6 +86,7 @@ b.text-diff {
     border-right: none;
     border-bottom: 4px solid gainsboro;
     margin-bottom: 15px;
+    padding-bottom: 15px;
   }
 
   div.content > div.box .box-title {
@@ -89,15 +102,22 @@ b.text-diff {
     text-align: left;
     font-size: 34px;
   }
+
+  .btn-menu-option {
+    font-size: 2.5rem;
+  }
 }
 
 /* Animações */
 
 @keyframes main-menu-in {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  40% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }

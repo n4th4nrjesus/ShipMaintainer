@@ -14,6 +14,10 @@
                 <p class="box-text attractive-text">Rápido, venha controlar essa situação!</p>
             </div>
             <div class="col-12 col-lg-6">
+                <div class="text-center d-grid gap-2 h-100 pt-5">
+                    <button type="button" class="btn btn-menu-option mb-5">Novo jogo</button>
+                    <button type="button" class="btn btn-menu-option">Continuar jogo</button>
+                </div>
             </div>
         </div>
     </div>
