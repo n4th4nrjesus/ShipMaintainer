@@ -1,0 +1,29 @@
+{
+  "name": "shipmaintainer",
+  "version": "1.0.0",
+  "description": "A space roguelike game made by a guy who likes roguelike games and space games...",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n4th4nrjesus/ShipMaintainer.git"
+  },
+  "keywords": [
+    "ship",
+    "maintainer",
+    "space",
+    "alien",
+    "roguelike"
+  ],
+  "author": "Nathan Rocha de Jesus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n4th4nrjesus/ShipMaintainer/issues"
+  },
+  "homepage": "https://github.com/n4th4nrjesus/ShipMaintainer#readme",
+  "dependencies": {
+    "phaser": "^3.55.2"
+  }
+}
