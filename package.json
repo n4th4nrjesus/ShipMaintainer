@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/n4th4nrjesus/ShipMaintainer#readme",
   "dependencies": {
+    "jquery": "^3.6.0",
     "phaser": "^3.55.2"
   }
 }
