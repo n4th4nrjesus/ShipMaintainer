@@ -24,5 +24,6 @@ $(window).on("load", () => {
       update: update,
     },
   };
+
   var game = new Phaser.Game(gameConfig);
 });
